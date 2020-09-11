@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import CoreXLSX
 
 @main
+@objc(APLAppDelegate)
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
