@@ -11,7 +11,6 @@
 		592566A1250B472200024A97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592566A0250B472200024A97 /* SceneDelegate.swift */; };
 		592566A3250B472200024A97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592566A2250B472200024A97 /* ViewController.swift */; };
 		592566A6250B472200024A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592566A4250B472200024A97 /* Main.storyboard */; };
-		592566A8250B472200024A97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592566A7250B472200024A97 /* ContentView.swift */; };
 		592566AA250B472400024A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592566A9250B472400024A97 /* Assets.xcassets */; };
 		592566AD250B472400024A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592566AB250B472400024A97 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		592566A0250B472200024A97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		592566A2250B472200024A97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		592566A5250B472200024A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		592566A7250B472200024A97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		592566A9250B472400024A97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		592566AC250B472400024A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		592566AE250B472400024A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 				592566A0250B472200024A97 /* SceneDelegate.swift */,
 				592566A2250B472200024A97 /* ViewController.swift */,
 				592566A4250B472200024A97 /* Main.storyboard */,
-				592566A7250B472200024A97 /* ContentView.swift */,
 				592566A9250B472400024A97 /* Assets.xcassets */,
 				592566AB250B472400024A97 /* LaunchScreen.storyboard */,
 				592566AE250B472400024A97 /* Info.plist */,
@@ -142,7 +139,6 @@
 			files = (
 				592566A3250B472200024A97 /* ViewController.swift in Sources */,
 				5925669F250B472200024A97 /* AppDelegate.swift in Sources */,
-				592566A8250B472200024A97 /* ContentView.swift in Sources */,
 				592566A1250B472200024A97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
