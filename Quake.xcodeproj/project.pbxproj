@@ -20,6 +20,7 @@
 		592566BB250B47BB00024A97 /* APLEarthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592566B7250B47BB00024A97 /* APLEarthquake.swift */; };
 		59807909250B64E300AA967A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59807908250B64E300AA967A /* QuizViewController.swift */; };
 		5980790B250B848700AA967A /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5980790A250B848700AA967A /* QuizResultsViewController.swift */; };
+		59F6F6D2250D186D0039AD7C /* Quake Data.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 59F6F6D1250D186D0039AD7C /* Quake Data.xlsx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		592566B7250B47BB00024A97 /* APLEarthquake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APLEarthquake.swift; sourceTree = "<group>"; };
 		59807908250B64E300AA967A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		5980790A250B848700AA967A /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
+		59F6F6D1250D186D0039AD7C /* Quake Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quake Data.xlsx"; path = "../../../../Downloads/Quake Data.xlsx"; sourceTree = "<group>"; };
 		9ACF311759685E96A153700D /* Pods_Quake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		5925669D250B472200024A97 /* Quake */ = {
 			isa = PBXGroup;
 			children = (
+				59F6F6D1250D186D0039AD7C /* Quake Data.xlsx */,
 				5925669E250B472200024A97 /* AppDelegate.swift */,
 				592566A0250B472200024A97 /* SceneDelegate.swift */,
 				592566B7250B47BB00024A97 /* APLEarthquake.swift */,
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F6F6D2250D186D0039AD7C /* Quake Data.xlsx in Resources */,
 				592566AD250B472400024A97 /* LaunchScreen.storyboard in Resources */,
 				592566AA250B472400024A97 /* Assets.xcassets in Resources */,
 				592566A6250B472200024A97 /* Main.storyboard in Resources */,
