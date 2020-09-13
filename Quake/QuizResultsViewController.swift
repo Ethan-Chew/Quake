@@ -54,7 +54,7 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     @IBAction func goBackToHome(_ sender: Any) {
-        
+        performSegue(withIdentifier: "goToHome", sender: nil)
     }
     
 }

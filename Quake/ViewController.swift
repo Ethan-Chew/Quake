@@ -200,6 +200,8 @@ class ViewController: UIViewController {
         configureEarthquake()
     }
 
-
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+        
+    }
 }
 
