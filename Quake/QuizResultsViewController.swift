@@ -23,16 +23,19 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         
         // Get Data from User Defaults
-        correctQuestions = userDefaults.object(forKey: "Correct Question") as? [String] ?? [String]()
-        incorrectQuestions = userDefaults.object(forKey: "Incorrect Question") as? [String] ?? [String]()
+        correctQuestions = userDefaults.object(forKey: "Correct Questions") as? [String] ?? [String]()
+        incorrectQuestions = userDefaults.object(forKey: "Incorrect Questions") as? [String] ?? [String]()
         
         // Set Amount of correct answers
-        print(incorrectQuestions)
         correctQnsLabel.text = "\(10 - incorrectQuestions.count)/10"
         
         // Curved Corners
         returnHomeBtn.clipsToBounds = true
         returnHomeBtn.layer.cornerRadius = 20
+        
+        // Configure Table View
+        questionsTableView.dataSource = self
+        questionsTableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,14 +45,15 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
         
-        if (correctQuestions.contains("Question \(indexPath.row)")) {
+        
+        if (correctQuestions.contains("Question \(indexPath.row + 1)")) {
             cell.textLabel?.text = "Question \(indexPath.row + 1) = Correct"
-        } else if (incorrectQuestions.contains("Question \(indexPath.row)")) {
+        } else if (incorrectQuestions.contains("Question \(indexPath.row + 1)")) {
             cell.textLabel?.text = "Question \(indexPath.row + 1) = Incorrect"
         } else {
             fatalError()
         }
-        
+
         return cell
     }
 

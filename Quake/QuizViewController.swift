@@ -63,21 +63,19 @@ class QuizViewController: UIViewController {
             guard let file = XLSXFile(filepath: filepath) else {
                 fatalError("XLSX file at \(filepath) is corrupted or does not exist")
             }
-            print("yes")
             
             for wbk in try file.parseWorkbooks() {
                 for (name, path) in try file.parseWorksheetPathsAndNames(workbook: wbk) {
                     
                     let sharedStrings = try file.parseSharedStrings()
                     let worksheet = try file.parseWorksheet(at: path)
+                    var randomNumbers: [Int] = []
                     
                     // Pick random row number
-                    for i in 1...10 {
-                        randomRowNumber.append(Int.random(in: 1...21))
-                    }
+                    randomNumbers = generateRandomNumber(1, 21, 10)
                     
                     for i in 1...10 {
-                        let parseData = worksheet.cells(atRows: [UInt(randomRowNumber[i - 1])])
+                        let parseData = worksheet.cells(atRows: [UInt(randomNumbers[i - 1])])
                             .compactMap { $0.stringValue(sharedStrings) }
                         
                         data["Data \(i)"] = parseData
@@ -88,6 +86,31 @@ class QuizViewController: UIViewController {
         } catch {
             fatalError("\(error.localizedDescription)")
         }
+    }
+    
+    func generateRandomNumber(_ from:Int, _ to:Int, _ qut:Int?) -> [Int] {
+        var myRandomNumbers = [Int]() //All our generated numbers
+        var numberOfNumbers = qut //How many numbers to generate
+        
+        let lower = UInt32(from) //Generate from this number..
+        let higher = UInt32(to+1) //To this one
+
+        if numberOfNumbers == nil || numberOfNumbers! > (to-from) + 1
+        {
+            numberOfNumbers = (to-from) + 1
+        }
+        
+        while myRandomNumbers.count != numberOfNumbers
+        {
+            let myNumber = arc4random_uniform(higher - lower) + lower
+            
+            if !myRandomNumbers.contains(Int(myNumber))
+            {
+                myRandomNumbers.append(Int(myNumber))
+            }
+        }
+        
+        return myRandomNumbers
     }
     
     func resetButtonColours() {
@@ -112,7 +135,6 @@ class QuizViewController: UIViewController {
             
             questionTextView.text = currentQuizQn[0] // Gets the Question at Array Path 0
             currentQuizQn.remove(at: 0) // Removes the Question from Array
-            print(currentQuizQn)
             currentQuizAns = currentQuizQn[3] // Last index of Array is the correct answer
             
             for _ in 0...5 { // Shuffles the Answer Order
@@ -194,7 +216,6 @@ class QuizViewController: UIViewController {
     
     @IBAction func optionOneBtn(_ sender: Any) {
         userPressedOption = optionOneBtn.currentTitle!
-        print(userPressedOption)
         
         optionOneBtn.backgroundColor = buttonSelectColour
         optionTwoBtn.backgroundColor = UIColor.systemGray
@@ -206,7 +227,6 @@ class QuizViewController: UIViewController {
     
     @IBAction func optionTwoBtn(_ sender: Any) {
         userPressedOption = optionTwoBtn.currentTitle!
-        print(userPressedOption)
         
         optionTwoBtn.backgroundColor = buttonSelectColour
         optionOneBtn.backgroundColor = UIColor.systemGray
@@ -218,7 +238,6 @@ class QuizViewController: UIViewController {
     
     @IBAction func optionThreeBtn(_ sender: Any) {
         userPressedOption = optionThreeBtn.currentTitle!
-        print(userPressedOption)
         
         optionThreeBtn.backgroundColor = buttonSelectColour
         optionTwoBtn.backgroundColor = UIColor.systemGray
@@ -230,7 +249,6 @@ class QuizViewController: UIViewController {
     
     @IBAction func optionFourBtn(_ sender: Any) {
         userPressedOption = optionFourBtn.currentTitle!
-        print(userPressedOption)
         
         optionFourBtn.backgroundColor = buttonSelectColour
         optionTwoBtn.backgroundColor = UIColor.systemGray
