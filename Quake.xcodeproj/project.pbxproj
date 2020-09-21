@@ -20,8 +20,21 @@
 		592566BB250B47BB00024A97 /* APLEarthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592566B7250B47BB00024A97 /* APLEarthquake.swift */; };
 		59807909250B64E300AA967A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59807908250B64E300AA967A /* QuizViewController.swift */; };
 		5980790B250B848700AA967A /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5980790A250B848700AA967A /* QuizResultsViewController.swift */; };
-		59F6F6D2250D186D0039AD7C /* Quake Data.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 59F6F6D1250D186D0039AD7C /* Quake Data.xlsx */; };
+		5990E3752512F5D300CA27F0 /* Quake Data.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 5990E3742512F5D300CA27F0 /* Quake Data.xlsx */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		599FFD3A25171F5F00DB17BA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		298F1236FCCDEDD7C5879164 /* Pods-Quake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quake.release.xcconfig"; path = "Target Support Files/Pods-Quake/Pods-Quake.release.xcconfig"; sourceTree = "<group>"; };
@@ -40,7 +53,9 @@
 		592566B7250B47BB00024A97 /* APLEarthquake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APLEarthquake.swift; sourceTree = "<group>"; };
 		59807908250B64E300AA967A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		5980790A250B848700AA967A /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
-		59F6F6D1250D186D0039AD7C /* Quake Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quake Data.xlsx"; path = "../../../../Downloads/Quake Data.xlsx"; sourceTree = "<group>"; };
+		5990E3742512F5D300CA27F0 /* Quake Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quake Data.xlsx"; sourceTree = "<group>"; };
+		599FFD2A25171F5900DB17BA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		599FFD2C25171F5900DB17BA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9ACF311759685E96A153700D /* Pods_Quake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,7 +92,7 @@
 		5925669D250B472200024A97 /* Quake */ = {
 			isa = PBXGroup;
 			children = (
-				59F6F6D1250D186D0039AD7C /* Quake Data.xlsx */,
+				5990E3742512F5D300CA27F0 /* Quake Data.xlsx */,
 				5925669E250B472200024A97 /* AppDelegate.swift */,
 				592566A0250B472200024A97 /* SceneDelegate.swift */,
 				592566B7250B47BB00024A97 /* APLEarthquake.swift */,
@@ -108,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				9ACF311759685E96A153700D /* Pods_Quake.framework */,
+				599FFD2A25171F5900DB17BA /* WidgetKit.framework */,
+				599FFD2C25171F5900DB17BA /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +141,7 @@
 				59256698250B472200024A97 /* Frameworks */,
 				59256699250B472200024A97 /* Resources */,
 				EAC64629A4796C2343F7AADE /* [CP] Embed Pods Frameworks */,
+				599FFD3A25171F5F00DB17BA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -171,8 +189,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59F6F6D2250D186D0039AD7C /* Quake Data.xlsx in Resources */,
 				592566AD250B472400024A97 /* LaunchScreen.storyboard in Resources */,
+				5990E3752512F5D300CA27F0 /* Quake Data.xlsx in Resources */,
 				592566AA250B472400024A97 /* Assets.xcassets in Resources */,
 				592566A6250B472200024A97 /* Main.storyboard in Resources */,
 			);
@@ -312,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -367,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

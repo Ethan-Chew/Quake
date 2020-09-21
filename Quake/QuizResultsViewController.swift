@@ -18,7 +18,8 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var questionsTableView: UITableView!
     @IBOutlet weak var correctQnsLabel: UILabel!
     @IBOutlet weak var returnHomeBtn: UIButton!
-
+    @IBOutlet weak var curvedThing: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +33,8 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
         // Curved Corners
         returnHomeBtn.clipsToBounds = true
         returnHomeBtn.layer.cornerRadius = 20
+        curvedThing.clipsToBounds = true
+        curvedThing.layer.cornerRadius = 10
         
         // Configure Table View
         questionsTableView.dataSource = self

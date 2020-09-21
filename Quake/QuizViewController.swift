@@ -18,6 +18,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var optionFourBtn: UIButton!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var questionNumber: UILabel!
+    @IBOutlet weak var curvedThing: UILabel!
     
     // Variables
     var data:[String:[String]] = [:]
@@ -43,11 +44,13 @@ class QuizViewController: UIViewController {
         optionThreeBtn.clipsToBounds = true
         optionFourBtn.clipsToBounds = true
         submitBtn.clipsToBounds = true
+        curvedThing.clipsToBounds = true
         optionOneBtn.layer.cornerRadius = 10
         optionTwoBtn.layer.cornerRadius = 10
         optionThreeBtn.layer.cornerRadius = 10
         optionFourBtn.layer.cornerRadius = 10
         submitBtn.layer.cornerRadius = 10
+        curvedThing.layer.cornerRadius = 10
     }
     
     // Functions

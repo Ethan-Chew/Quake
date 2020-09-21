@@ -193,7 +193,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         applyRoundCorners(uselessBtn)
         
         checkEarthquakeStatus()
@@ -202,6 +202,11 @@ class ViewController: UIViewController {
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
         
+    }
+    
+    @IBAction func uselessBtn(_ sender: Any) {
+        print("hi2")
+        performSegue(withIdentifier: "quiz", sender: nil)
     }
 }
 
